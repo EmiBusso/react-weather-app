@@ -6,15 +6,23 @@ export default function Weather() {
     <div className="Weather">
       <form>
         <div className="row">
-          <div className="col-9">
+          <div class="col-6">
             <input
               type="search"
-              placeholder="Enter a City.."
-              className="form-control"
+              placeholder="Enter a City ..."
+              class="form-control"
+              autoFocus="on"
             />
           </div>
-          <div className="col-3">
-            <input type="submit" value="Search" className="btn btn-primary" />
+          <div class="col-3">
+            <input
+              type="submit"
+              value="Search"
+              class="form-control btn btn-secondary w-100"
+            />
+          </div>
+          <div class="col-3">
+            <button class="btn btn-secondary w-100">Location 📍</button>
           </div>
         </div>
       </form>
@@ -22,13 +30,19 @@ export default function Weather() {
       <ul>
         <li>Thursday 7:00 p.m</li>
         <li>Clear with periodic clouds</li>
-        <div className="row">
+        <div className="row mt-3">
           <div className="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
-              alt="Clear with periodic clouds"
-            />
-            27 °C
+            <div className="clearfix">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/sunny_s_cloudy.png"
+                alt="Clear with periodic clouds"
+                className="float-left"
+              />
+              <div className="float-left">
+                <span className="temperature">27</span>
+                <span className="unit"> °C </span>
+              </div>
+            </div>
           </div>
           <div className="col-6">
             <ul>
