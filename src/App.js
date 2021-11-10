@@ -10,7 +10,10 @@ export default function App() {
 
         <footer>
           This project was coded by{" "}
-          <a href="https://mystifying-archimedes-2ecfd3.netlify.app/">
+          <a
+            href="https://mystifying-archimedes-2ecfd3.netlify.app/"
+            rel="noopener noreferrer"
+          >
             {" "}
             Emilia Busso{" "}
           </a>{" "}
@@ -18,6 +21,7 @@ export default function App() {
           <a
             href="https://github.com/EmiBusso/react-weather-app"
             target="_blanck"
+            rel="noopener noreferrer"
           >
             open-sourced on Github
           </a>{" "}

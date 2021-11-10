@@ -8,6 +8,7 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
+
   function handleResponse(response) {
     setWeatherData({
       ready: true,
@@ -60,7 +61,11 @@ export default function Weather(props) {
               />
             </div>
             <div class="col-3">
-              <button class="btn btn-secondary w-100">Location 📍</button>
+              <input
+                type="submit"
+                value="Location 📍"
+                class="btn btn-secondary w-100"
+              />
             </div>
           </div>
         </form>
