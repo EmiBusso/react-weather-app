@@ -1,9 +1,12 @@
 .App {
-  max-width: 600px;
-  margin: 30px auto;
+  background-size: cover;
+  background-image: url("images/sky.jpeg");
+  background-repeat: repeat-x;
+  height: 100vh;
+  padding: 100px 50px;
 }
 
 .App footer {
-  font-size: 11px;
+  font-size: 15px;
   margin: 10px 0;
 }

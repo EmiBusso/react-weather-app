@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+
 import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
-
 
   function handleResponse(response) {
     setWeatherData({
@@ -39,6 +39,18 @@ export default function Weather(props) {
     axios.get(apiUrl).then(handleResponse);
   }
 
+  function searchLocation(position) {
+    let apiKey = "e91d422394f0de0395bd7df28528dcc8";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function getCurrentLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -65,6 +77,7 @@ export default function Weather(props) {
                 type="submit"
                 value="Location 📍"
                 class="btn btn-secondary w-100"
+                onClick={getCurrentLocation}
               />
             </div>
           </div>

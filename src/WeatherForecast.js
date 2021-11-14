@@ -11,10 +11,6 @@ export default function WeatherForecast(props) {
     setLoaded(false);
   }, [props.coordinates]);
 
-  useEffect(() => {
-    setLoaded(false);
-  }, [props.date]);
-
   function handleResponse(response) {
     setForecast(response.data.daily);
     setLoaded(true);
