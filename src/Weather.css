@@ -1,16 +1,16 @@
 .Weather {
   font-family: arial, sans-serif;
   border: 1px solid #8a99ad;
-  padding: 30px;
-  border-radius: 4px;
+  padding: 40px;
+  border-radius: 6px;
   color: rgb(20, 20, 20);
 }
 
 .Weather h1 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 100;
   margin: 20px 0 0 0;
-  line-height: 29px;
+  line-height: 38px;
 }
 
 .Weather ul {
@@ -19,7 +19,7 @@
 }
 
 .Weather li {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 100;
   line-height: 19px;
   list-style: none;
@@ -31,11 +31,10 @@
   font-size: 64px;
   line-height: 64px;
   font-weight: 400;
-
 }
 
 .Weather canvas {
-  margin: 10px auto;
+  margin: 12px auto;
   display: inline-block;
 }
 
