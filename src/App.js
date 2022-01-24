@@ -20,7 +20,7 @@ export default function App() {
           and is{" "}
           <a
             href="https://github.com/EmiBusso/react-weather-app"
-            target="_blanck"
+            target="_blank"
             rel="noopener noreferrer"
           >
             open-sourced on Github
