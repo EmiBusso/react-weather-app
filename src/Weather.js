@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
-
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -54,8 +53,8 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div class="col-6">
+          <div className="row navigation">
+            <div className="col-6">
               <input
                 type="search"
                 placeholder="Enter a City ..."
@@ -64,14 +63,14 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
             </div>
-            <div class="col-3">
+            <div className="col-3">
               <input
                 type="submit"
                 value="Search"
                 class="form-control btn btn-secondary w-100"
               />
             </div>
-            <div class="col-3">
+            <div className="col-3">
               <input
                 type="submit"
                 value="Location 📍"
@@ -79,6 +78,26 @@ export default function Weather(props) {
                 onClick={getCurrentLocation}
               />
             </div>
+          </div>
+          <div className="row navigationMobile">
+            <input
+              type="search"
+              placeholder="Enter a City ..."
+              class="form-control"
+              autoFocus="on"
+              onChange={handleCityChange}
+            />
+            <input
+              type="submit"
+              value="Search"
+              class="form-control btn btn-secondary w-100"
+            />
+            <input
+              type="submit"
+              value="Location 📍"
+              class="btn btn-secondary w-100"
+              onClick={getCurrentLocation}
+            />
           </div>
         </form>
         <WeatherInfo data={weatherData} />

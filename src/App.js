@@ -9,7 +9,7 @@ export default function App() {
         <Weather defaultCity="Vancouver" />
 
         <footer>
-          This project was coded by{" "}
+          💻 This project was coded by{" "}
           <a
             href="https://mystifying-archimedes-2ecfd3.netlify.app/"
             rel="noopener noreferrer"
